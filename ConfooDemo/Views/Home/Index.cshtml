@@ -12,7 +12,7 @@
 		<a class="btn btn-default btn-lg" href="http://www.matrichard.com"><i class="icon-pencil"></i>My Blog</a>
 		<a href="https://twitter.com/matrichard5" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @@matrichard5</a>
 		<script>
-			!function (d, s, id) {
+			!function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
 				if (!d.getElementById(id)) {
 					js = d.createElement(s);
@@ -25,34 +25,35 @@
 		<a class="btn btn-default btn-lg" href="https://github.com/matrichard/confooDemo"><i class="icon-github"></i>Code on Github</a>
 	</p>
 </div>
-<div class="row">
-
-</div>
-<div class="row" ng-controller="OptionsController as ctrl">
-	<div class="col-md-4">
-		<div>
+<div ng-controller="OptionsController as ctrl">
+	<div class="row">
+		@*<div class="col-md-4">
+			<p>
+				
+			</p>
+		</div>*@
+		<div class="col-lg-offset-4 col-lg-4">
 			<p>
 				<a class="btn btn-default" ng-click="ctrl.incrementOption('a')">Option A</a> {{ctrl.model.a}}
-			</p>
-		</div>
-		<div>
-			<p>
 				<a class="btn btn-default" ng-click="ctrl.incrementOption('b')">Choose B</a> {{ctrl.model.b}}
-			</p>
-		</div>
-		<div>
-			<p>
 				<a class="btn btn-default" ng-click="ctrl.incrementOption('c')">Choose C</a> {{ctrl.model.c}}
 			</p>
 		</div>
+		@*<div class="col-md-4">
+			<p>
+				
+			</p>
+		</div>*@
 	</div>
-	<div class="col-md-4">
-		<canvas id="doughnut" class="chart chart-doughnut" data="ctrl.data"
-				labels="ctrl.labels" legend="true"></canvas>
-	</div>
-	<div class="col-md-4">
-		<canvas id="pie" class="chart chart-pie" data="ctrl.data"
-				labels="ctrl.labels" legend="true"></canvas>
+	<div class="row">
+		<div class="col-lg-6">
+			<canvas id="doughnut" class="chart chart-doughnut" data="ctrl.data"
+					labels="ctrl.labels" legend="true"></canvas>
+		</div>
+		<div class="col-lg-6">
+			<canvas id="pie" class="chart chart-pie" data="ctrl.data"
+					labels="ctrl.labels" legend="true"></canvas>
+		</div>
 	</div>
 </div>
 @section scripts
